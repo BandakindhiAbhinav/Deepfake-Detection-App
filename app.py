@@ -57,9 +57,9 @@ def predict_image(image):
         probability = output.item()
 
     if probability >= 0.5:
-        return "Deepfake", probability
-    else:
         return "Real", probability
+    else:
+        return "Deepfake", probability
 
 
 uploaded_file = st.file_uploader(
