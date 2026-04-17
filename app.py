@@ -56,7 +56,7 @@ def predict_image(image):
 
         probability = output.item()
 
-    if probability >= 0.55:
+    if probability <= 0.60:
         return "Deepfake", probability
     else:
         return "Real", probability
